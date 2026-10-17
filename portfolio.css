@@ -1312,6 +1312,12 @@ footer a:hover { color: var(--neon-m); }
   opacity: 0.6;
 }
 
+.stack-caption .stack-caption__text {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
 .stack-caption__text {
   margin: 0.6rem 0 0;
   max-width: 34ch;
