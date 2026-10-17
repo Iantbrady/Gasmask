@@ -563,22 +563,34 @@ li{list-style:none}table{border-collapse:separate;
         .toolbar-bts__close .ico-svg {
             opacity: 1
         }
+
+        .footer__wrapper a,
+        .footer__wrapper div {
+  padding: 15px;
+        }
+      
         .footer__wrapper {
             padding-left: 20px;
             padding-right: 20px;
-            padding-top: 0px;
-            padding-bottom: 0px;
-            align-items: center;
-            justify-content: center;
-            
+            padding-top: 2em;
+            padding-bottom: 0px;            
         }
+.footer__right {justify-content: right;}
 
           .footer__logo {
               justify-content: center;
+              align-items: center;
+              width: 100%;
+              margin: 0 auto;
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              left: 50%;
+              transform: translate(-50%, -50%);
         }
 
         .footer__logo svg {
-            fill: var(--color-primary)
+            fill: var(--color-primary);
         }
 :root {
   --w: #fff;
@@ -932,7 +944,8 @@ footer.footer__wrapper nav {
 
 .no-results { padding: 40px 4px; color: var(--fg-dim); }
 
-.about-section { margin-top: 5em; color: var(--obsidian); }
+
+.about-section { margin-left: 2em; margin-right: 2em; margin-bottom: 2em; margin-top: .5em; color: var(--obsidian); }
 
 .about-section > p { color: var(--pdx-dark); font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.45; }
 
@@ -1114,6 +1127,7 @@ footer a:hover { color: var(--neon-m); }
   padding-top: 1rem;
   padding-left: 2em;
   padding-right: 2em;
+  padding-bottom: 3em;
   grid-auto-flow: dense; /* Crucial: backfills gaps when elements open */
 }
 
