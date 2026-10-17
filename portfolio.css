@@ -1319,6 +1319,8 @@ footer a:hover { color: var(--neon-m); }
   line-height: 1.45;
   color: var(--text-primary);
   text-align: center;
+  display: block;
+  width: 100%;
 }
 
 .stack-caption__link {
