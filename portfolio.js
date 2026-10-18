@@ -4,57 +4,6 @@
 
   const root = document.documentElement;
   const siteHeader = document.querySelector("#site-header");
-  const floatingHeader = document.querySelector("#floating-header");
-  const rows = [...document.querySelectorAll(".row")];
-  /* ---------------------------------------------------------
-     Portfolio artwork cycling
-     Preserves the original data-art-1 / 2 / 3 convention.
-  --------------------------------------------------------- */
-      (function () {
-        var CYCLE_MS = 900; // time each image stays on screen
-        var FADE_MS = 160; // how long the fade-out lasts before swapping
-
-        document.querySelectorAll(".row").forEach(function (row) {
-          var images = [];
-          for (var i = 1; row.getAttribute("data-art-" + i); i++) {
-            images.push(row.getAttribute("data-art-" + i));
-          }
-          if (images.length < 2) return; // nothing to cycle; static --art (if any) just works as before
-
-          var index = 0;
-          var timer = null;
-
-          function applyCurrent() {
-            row.style.setProperty("--art", images[index]);
-          }
-
-          function next() {
-            row.classList.add("art-fade");
-            window.setTimeout(function () {
-              index = (index + 1) % images.length;
-              applyCurrent();
-              row.classList.remove("art-fade");
-            }, FADE_MS);
-          }
-
-          function start() {
-            index = 0;
-            applyCurrent();
-            timer = window.setInterval(next, CYCLE_MS);
-          }
-
-          function stop() {
-            window.clearInterval(timer);
-            row.classList.remove("art-fade");
-          }
-
-          row.addEventListener("mouseenter", start);
-          row.addEventListener("focus", start);
-          row.addEventListener("mouseleave", stop);
-          row.addEventListener("blur", stop);
-        });
-      })();
-
   /* ---------------------------------------------------------
      GASMASK / IAN BRADY heading
        - mouse: flips to IAN BRADY while hovered (CSS)
@@ -214,7 +163,7 @@
     const terms = value.trim().toLowerCase().split(/\s+/).filter(Boolean);
     activeQuery = value.trim().replace(/\s+/g, " ");
     renderChips();
-    const items = document.querySelectorAll(".row, .grid-item");
+    const items = document.querySelectorAll(".grid-item");
     let visible = 0;
 
     items.forEach((item) => {
@@ -265,7 +214,6 @@
   const cancelSearch = () => { filterRows(""); closeSearchPanel(); };
 
   headerSearchButton?.addEventListener("click", openSearchPanel);
-  document.querySelector(".floating-search-button")?.addEventListener("click", openSearchPanel);
   panelClose?.addEventListener("click", cancelSearch);
   searchPanel?.addEventListener("click", (event) => {
     if (event.target === searchPanel) cancelSearch();
@@ -362,36 +310,14 @@
     });
   });
 
-  /* ---------------------------------------------------------
-     Sticky header: slides in once the top header has scrolled away.
-     On phones its links sit behind a small menu button.
-  --------------------------------------------------------- */
-  if (floatingHeader && siteHeader) {
-    const floatToggle = floatingHeader.querySelector(".floating-menu-toggle");
-    const setFloatMenu = (open) => {
-      floatingHeader.classList.toggle("menu-open", open);
-      floatToggle?.setAttribute("aria-expanded", String(open));
-    };
-    let ticking = false;
-    const updateFloating = () => {
-      ticking = false;
-      const past = siteHeader.getBoundingClientRect().bottom < 0;
-      const show = past && !siteHeader.classList.contains("menu-open");
-      floatingHeader.classList.toggle("show", show);
-      if (!show) setFloatMenu(false);
-    };
-    window.addEventListener("scroll", () => {
-      if (!ticking) { ticking = true; requestAnimationFrame(updateFloating); }
-    }, { passive: true });
-    window.addEventListener("resize", updateFloating);
-    updateFloating();
-    floatToggle?.addEventListener("click", () => setFloatMenu(!floatingHeader.classList.contains("menu-open")));
-    floatingHeader.querySelectorAll("nav a").forEach((a) => a.addEventListener("click", () => setFloatMenu(false)));
-    document.addEventListener("click", (e) => { if (!floatingHeader.contains(e.target)) setFloatMenu(false); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setFloatMenu(false); });
+  /* Sticky header: the main header stays at the top; a soft shadow appears once the page scrolls */
+  if (siteHeader) {
+    const markStuck = () => siteHeader.classList.toggle("is-stuck", window.scrollY > 4);
+    window.addEventListener("scroll", markStuck, { passive: true });
+    markStuck();
   }
 
-  /* About: on phones only the first paragraph shows until "Read more" is tapped */
+  /* About: only the first paragraph shows until "Read more" is clicked */
   document.querySelectorAll(".about-section").forEach((section) => {
     const more = section.querySelector(".about-more");
     const btn = section.querySelector(".about-toggle");
@@ -405,14 +331,6 @@
     });
   });
 
-  /* Keep the floating header from appearing while a mobile menu is open. */
-  const observer = new MutationObserver(() => {
-    if (siteHeader?.classList.contains("menu-open")) {
-      floatingHeader?.classList.remove("show");
-    }
-  });
-
-  if (siteHeader) observer.observe(siteHeader, { attributes: true, attributeFilter: ["class"] });
   /* Avoid stale hidden rows when returning from browser history. */
   window.addEventListener("pageshow", () => {
     if (!panelInput?.value) filterRows("");
@@ -680,7 +598,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // keep the tapped project where it was on screen (otherwise other stacks closing above it,
       // or the browser's scroll anchoring, can throw the view far past it - very visible on phones)
       const anchorEl = () => (entry.isOpen() ? caption || cards[0] : grid || stack);
-      const header = document.querySelector("#floating-header.show");
+      const header = document.querySelector("#site-header");
       const headerH = header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0;
       const beforeTop = Math.max(anchorEl().getBoundingClientRect().top, headerH);
 

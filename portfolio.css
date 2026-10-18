@@ -252,18 +252,6 @@ li{list-style:none}table{border-collapse:separate;
             margin-left: clamp(8px, 3vw, 24px)
         }
 
-        .header-main__right {
-            display: flex;
-            gap: 12px;
-            height: var(--sf-height);
-            margin-left: clamp(8px, 3vw, 20px)
-        }
-
-        .header-main__bts {
-            display: flex;
-            gap: 12px
-        }
-
         .search-form {
             position: relative;
             display: flex;
@@ -310,12 +298,6 @@ li{list-style:none}table{border-collapse:separate;
 
         .search-form__button .ico-svg {
             fill: rgba(0, 0, 0, 0);
-        }
-
-        .header-floating__right {
-            display: flex;
-            align-items: center;
-            gap: 40px
         }
         .button {
             position: relative;
@@ -509,60 +491,6 @@ li{list-style:none}table{border-collapse:separate;
         .head-site {
             background-color: var(--w);
         }
-
-        .toolbar-bts {
-            --toolbar-gutter: 40px;
-            display: inline-flex;
-            gap: var(--toolbar-gutter)
-        }
-
-        .toolbar-bts__item {
-            position: relative;
-            display: flex;
-            cursor: pointer; 
-        }
-
-        .toolbar-bts__item:hover .ico-svg {
-            fill: rgb(246, 0, 153); 
-            opacity: 1;  
-        }
-
-        .toolbar-bts .ico-svg {
-            display: block;
-            fill: var(--obsidian)
-        }
-
-        .toolbar-bts__share {
-            position: absolute;
-            top: 50%;
-            right: -17px;
-            display: flex;
-            align-items: center;
-            gap: var(--toolbar-gutter);
-            height: 45px;
-            padding: 0 20px;
-            background: var(--bg-secondary);
-            border-radius: 45px;
-            transform: translateY(-50%);
-            opacity: 0;
-            visibility: hidden;
-            fill: var(--obsidian);
-            transition: fill 1s;
-        }
-        .toolbar-bts__share .ico-svg {
-            display: block;
-            width: 16px;
-            fill: rgb(0, 0, 0);
-            opacity: .5;
-            /* FIXED: Now transitions both properties together */
-            transition: fill 1s, opacity 1s; 
-        }
-        .toolbar-bts__close {
-            cursor: pointer
-        }
-        .toolbar-bts__close .ico-svg {
-            opacity: 1
-        }
         .footer__wrapper {
             padding-left: 20px;
             padding-right: 20px;
@@ -641,15 +569,6 @@ img { max-width: 100%; }
   min-height: var(--header-height);
   padding: 6px;
 }
-.floating-logo {
-  display: inline-flex;
-  align-items: center;
-  min-width: max-content;
-  font-family: "JBLACK", sans-serif;
-  font-size: var(--text-size-medium);
-  line-height: 1;
-  letter-spacing: -.04em;
-}
 .main-nav {
   display: flex;
   align-items: center;
@@ -673,8 +592,7 @@ img { max-width: 100%; }
   transition: color .3s ease;
 }
 .main-nav a:hover,
-.nav-dropdown-toggle:hover,
-.floating-header a:hover { color: var(--neon-m); }
+.nav-dropdown-toggle:hover { color: var(--neon-m); }
 .nav-dropdown-toggle { gap: 7px; }
 .nav-arrow { transition: transform .3s var(--ease); }
 .site-header.nav-open .nav-arrow { transform: scaleY(-1); }
@@ -723,43 +641,6 @@ img { max-width: 100%; }
 .mobile-nav { display: none; }
 
 /* ---------- Floating / sticky header ---------- */
-.floating-header {
-  position: fixed;
-  top: -80px;
-  left: 0;
-  width: 100%;
-  height: var(--floating-height);
-  min-height: var(--floating-height);
-  z-index: 1100;
-  background: var(--pdx-light);
-  border-bottom: 1px solid var(--line);
-  transition: transform .35s var(--ease);
-  transform: translateY(0);
-}
-.floating-header.show { transform: translateY(80px); }
-.floating-header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding-inline: var(--pad);
-}
-.floating-header nav { 
-  display: flex; 
-  align-items: center; 
-  gap: 28px; 
-  text-transform: uppercase; 
-  font-family: "ferryman", var(--font-fallback); 
-  font-weight: var(--font-medium);
-}
-
-.floating-search-button {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: "ferryman", var(--font-fallback);
-}
 
 /* ---------- Main content / original visual system ---------- */
 
@@ -869,7 +750,6 @@ footer.footer__wrapper nav {
 }
 .section-heading-centered span {
   font-size: var(--text-size-XL);
-  display: flex;
   line-height: 100%;
   border: none;
   cursor: pointer;
@@ -1039,7 +919,6 @@ footer a:hover { color: var(--neon-m); }
 }
 
 @media (max-width: 768px) {
-  .floating-header { display: none; }
   .header-inner { padding-inline: 4px; }
   .nav-dropdown { display: none; }
   .glitch-text { font-size: clamp(2.3rem, 16.5vw, 7rem); }
@@ -1099,8 +978,6 @@ footer a:hover { color: var(--neon-m); }
 .date {
   color: var(--text-muted);
 }
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:200, 300, 400, 500, 600, 700, 800, 900&display=swap');
 * {
   margin: 0; padding: 0; box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -1366,9 +1243,6 @@ html, body { overflow-x: clip; }
 
 /* ---- Gallery section on the home page ---- */
 .gallery-section .filter-bar { margin-bottom: 0.5rem; }
-
-.gallery-background {
-}
 
 /* ---- Hover cycling on a closed stack: the front card cross-fades through the stack's other pictures ---- */
 .stack-cycle {
@@ -1793,7 +1667,6 @@ video.viewer__media { width: auto; height: auto; background: #000; }
 .search-chip__x:focus-visible { background: #fff; color: var(--neon-m); outline: none; }
 /* the placeholder text steps aside while a filter is shown (the bar still opens search) */
 .search-form.has-filter .search-form__button { color: transparent !important; }
-.floating-header .search-form .search-chip { margin-right: 10px; }
 
 /* =========================================================
    iPhone / Safari fixes + sticky header, About and footer (Oct 2026)
@@ -1815,56 +1688,16 @@ video.viewer__media { width: auto; height: auto; background: #000; }
   height: 100%;
 }
 
-/* ---- Sticky header (slides in once you scroll past the top header) ---- */
-html { scroll-padding-top: calc(var(--floating-height, 72px) + 12px); }
-.floating-header { display: block; }
-.floating-logo { color: var(--obsidian); text-decoration: none; }
-.floating-header nav a { color: var(--obsidian); text-decoration: none; }
-.floating-menu-toggle { display: none; }
-
-@media (max-width: 768px) {
-  .floating-header { display: block; height: 60px; min-height: 60px; }
-  .floating-header.show { transform: translateY(80px); }
-  .floating-header-inner { position: relative; padding-inline: 16px; gap: 14px; }
-  .floating-header .header-main__right { margin-left: auto; }
-  .floating-header nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    background: var(--pdx-light);
-    transition: max-height .35s var(--ease, ease);
-  }
-  .floating-header.menu-open nav { max-height: 320px; box-shadow: 0 12px 24px rgba(0,0,0,.12); }
-  .floating-header nav a { display: block; padding: 15px 16px; border-top: 1px solid rgba(0,0,0,.1); }
-  .floating-menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    padding: 0 5px;
-    border: 0;
-    background: transparent;
-    color: var(--obsidian);
-    cursor: pointer;
-  }
-  .floating-menu-toggle > span:not(.sr-only) {
-    display: block;
-    height: 3px;
-    background: currentColor;
-    transition: transform .3s var(--ease, ease);
-  }
-  .floating-header.menu-open .floating-menu-toggle > span:first-child { transform: translateY(4px) rotate(45deg); }
-  .floating-header.menu-open .floating-menu-toggle > span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
-  html { scroll-padding-top: 72px; }
+/* ---- Sticky header: the main header stays pinned to the top while scrolling ---- */
+html { scroll-padding-top: calc(var(--header-height, 71px) + 36px); }
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--w);
+  transition: box-shadow .3s ease;
 }
+.header-main__search { margin-right: clamp(8px, 3vw, 24px); }
+.site-header.is-stuck { box-shadow: 0 1px 0 rgba(0, 0, 0, .06), 0 8px 24px rgba(0, 0, 0, .06); }
 
 /* ---- About ---- */
 .about-text { max-width: 62ch; margin: 0 auto; }
@@ -1876,24 +1709,26 @@ html { scroll-padding-top: calc(var(--floating-height, 72px) + 12px); }
 }
 .about-text p:first-child { margin-top: 0; }
 .about-toggle { display: none; }
+.about-section.js-collapse:not(.is-expanded) .about-more { display: none; }
+.about-section.js-collapse .about-toggle {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--neon-m);
+  font-size: var(--text-size-XS);
+  font-weight: bold;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.about-section.js-collapse .about-toggle:hover { text-decoration: underline; }
 
 @media (max-width: 768px) {
   .about-section { margin-top: 3.5em; padding-inline: 16px; }
   .about-text p { font-size: 1rem; line-height: 1.6; }
-  .about-section.js-collapse:not(.is-expanded) .about-more { display: none; }
-  .about-section.js-collapse .about-toggle {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0;
-    border: 0;
-    background: none;
-    color: var(--neon-m);
-    font-size: var(--text-size-XS);
-    font-weight: bold;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
+  .about-section.js-collapse .about-toggle { margin-top: 1rem; }
 }
 
 /* ---- Footer: copyright · coin · social links (stacks neatly on phones) ---- */
