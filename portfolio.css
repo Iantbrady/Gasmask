@@ -1770,3 +1770,9 @@ footer.footer__wrapper .footer__links a:hover { color: var(--neon-m); }
   footer.footer__wrapper .footer__copy,
   footer.footer__wrapper .footer__links { justify-self: center; justify-content: center; }
 }
+
+/* Footer coin = back to top */
+footer.footer__wrapper .footer__logo { cursor: pointer; transition: transform .25s ease; }
+footer.footer__wrapper .footer__logo:hover,
+footer.footer__wrapper .footer__logo:focus-visible { transform: translateY(-4px); }
+footer.footer__wrapper .footer__logo:focus-visible { outline: 2px solid var(--neon-m); outline-offset: 4px; border-radius: 50%; }

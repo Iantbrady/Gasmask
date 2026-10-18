@@ -317,6 +317,14 @@
     markStuck();
   }
 
+  /* Footer coin: back to the very top (the sticky header is always "in view", so a plain #anchor did nothing) */
+  document.querySelectorAll(".footer__logo").forEach((coin) => coin.addEventListener("click", (e) => {
+    e.preventDefault();
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  }));
+
   /* About: only the first paragraph shows until "Read more" is clicked */
   document.querySelectorAll(".about-section").forEach((section) => {
     const more = section.querySelector(".about-more");
