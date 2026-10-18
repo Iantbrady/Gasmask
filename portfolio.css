@@ -563,34 +563,22 @@ li{list-style:none}table{border-collapse:separate;
         .toolbar-bts__close .ico-svg {
             opacity: 1
         }
-
-        .footer__wrapper a,
-        .footer__wrapper div {
-  padding: 15px;
-        }
-      
         .footer__wrapper {
             padding-left: 20px;
             padding-right: 20px;
-            padding-top: 2em;
-            padding-bottom: 0px;            
+            padding-top: 0px;
+            padding-bottom: 0px;
+            align-items: center;
+            justify-content: center;
+            
         }
-.footer__right {justify-content: right;}
 
           .footer__logo {
               justify-content: center;
-              align-items: center;
-              width: 100%;
-              margin: 0 auto;
-              display: flex;
-              justify-content: center;
-              position: absolute;
-              left: 50%;
-              transform: translate(-50%, -50%);
         }
 
         .footer__logo svg {
-            fill: var(--color-primary);
+            fill: var(--color-primary)
         }
 :root {
   --w: #fff;
@@ -944,8 +932,7 @@ footer.footer__wrapper nav {
 
 .no-results { padding: 40px 4px; color: var(--fg-dim); }
 
-
-.about-section { margin-left: 2em; margin-right: 2em; margin-bottom: 2em; margin-top: .5em; color: var(--obsidian); }
+.about-section { margin-top: 5em; color: var(--obsidian); }
 
 .about-section > p { color: var(--pdx-dark); font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.45; }
 
@@ -1121,13 +1108,13 @@ footer a:hover { color: var(--neon-m); }
 /* --- VARIABLE STRUCTURAL FLOW SYSTEM --- */
 
 .photo-grid {
+  overflow-anchor: none;   /* the stack script keeps the view in place itself */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2.5rem 1.5rem;
   padding-top: 1rem;
   padding-left: 2em;
   padding-right: 2em;
-  padding-bottom: 3em;
   grid-auto-flow: dense; /* Crucial: backfills gaps when elements open */
 }
 
@@ -1304,7 +1291,9 @@ footer a:hover { color: var(--neon-m); }
    Leave the <a> out for projects that have no page yet. Hidden while the stack is closed.
    (It is a normal grid cell rather than a full-width row, because the grid is "dense":
    a full-width row would be pushed below everything else instead of staying by its stack.) */
-.stack-caption { display: none; }
+.stack-caption { display: none; 
+text-align: center;
+}
 
 .photo-grid .grid-item.stack-is-open .stack-caption {
   display: flex;
@@ -1326,12 +1315,6 @@ footer a:hover { color: var(--neon-m); }
   opacity: 0.6;
 }
 
-.stack-caption .stack-caption__text {
-  text-align: center;
-  display: block;
-  width: 100%;
-}
-
 .stack-caption__text {
   margin: 0.6rem 0 0;
   max-width: 34ch;
@@ -1339,8 +1322,6 @@ footer a:hover { color: var(--neon-m); }
   line-height: 1.45;
   color: var(--text-primary);
   text-align: center;
-  display: block;
-  width: 100%;
 }
 
 .stack-caption__link {
@@ -1813,3 +1794,144 @@ video.viewer__media { width: auto; height: auto; background: #000; }
 /* the placeholder text steps aside while a filter is shown (the bar still opens search) */
 .search-form.has-filter .search-form__button { color: transparent !important; }
 .floating-header .search-form .search-chip { margin-right: 10px; }
+
+/* =========================================================
+   iPhone / Safari fixes + sticky header, About and footer (Oct 2026)
+   ========================================================= */
+
+/* Stack cards: Safari let the zoomed "cover" pictures spill outside their
+   cards (over captions and into the gaps between stacks). The picture is now
+   pinned inside its card and the card clips it in a way Safari respects. */
+.photo-grid .grid-item .stack-container .card { min-height: 0; }
+.photo-grid .grid-item .stack-container .card .stack-content:not(:has(.card-caption)) {
+  position: relative;
+  overflow: hidden;
+  clip-path: inset(0);
+}
+.photo-grid .grid-item .stack-container .card .stack-content:not(:has(.card-caption)) > :is(img, video).stack-contained-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Sticky header (slides in once you scroll past the top header) ---- */
+html { scroll-padding-top: calc(var(--floating-height, 72px) + 12px); }
+.floating-header { display: block; }
+.floating-logo { color: var(--obsidian); text-decoration: none; }
+.floating-header nav a { color: var(--obsidian); text-decoration: none; }
+.floating-menu-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .floating-header { display: block; height: 60px; min-height: 60px; }
+  .floating-header.show { transform: translateY(80px); }
+  .floating-header-inner { position: relative; padding-inline: 16px; gap: 14px; }
+  .floating-header .header-main__right { margin-left: auto; }
+  .floating-header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--pdx-light);
+    transition: max-height .35s var(--ease, ease);
+  }
+  .floating-header.menu-open nav { max-height: 320px; box-shadow: 0 12px 24px rgba(0,0,0,.12); }
+  .floating-header nav a { display: block; padding: 15px 16px; border-top: 1px solid rgba(0,0,0,.1); }
+  .floating-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 0 5px;
+    border: 0;
+    background: transparent;
+    color: var(--obsidian);
+    cursor: pointer;
+  }
+  .floating-menu-toggle > span:not(.sr-only) {
+    display: block;
+    height: 3px;
+    background: currentColor;
+    transition: transform .3s var(--ease, ease);
+  }
+  .floating-header.menu-open .floating-menu-toggle > span:first-child { transform: translateY(4px) rotate(45deg); }
+  .floating-header.menu-open .floating-menu-toggle > span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+  html { scroll-padding-top: 72px; }
+}
+
+/* ---- About ---- */
+.about-text { max-width: 62ch; margin: 0 auto; }
+.about-text p {
+  margin: 1em 0 0;
+  color: var(--pdx-dark);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.45;
+}
+.about-text p:first-child { margin-top: 0; }
+.about-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .about-section { margin-top: 3.5em; padding-inline: 16px; }
+  .about-text p { font-size: 1rem; line-height: 1.6; }
+  .about-section.js-collapse:not(.is-expanded) .about-more { display: none; }
+  .about-section.js-collapse .about-toggle {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--neon-m);
+    font-size: var(--text-size-XS);
+    font-weight: bold;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+/* ---- Footer: copyright · coin · social links (stacks neatly on phones) ---- */
+footer.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "copy logo links";
+  align-items: center;
+  gap: 24px;
+  margin-top: 5em;
+  padding: 32px 2em;
+  border-top: 1px solid var(--line);
+}
+footer.footer__wrapper .footer__copy { grid-area: copy; justify-self: start; font-weight: bold; margin: 0; }
+footer.footer__wrapper .footer__logo { grid-area: logo; justify-self: center; display: block; line-height: 0; }
+footer.footer__wrapper .footer__logo img { display: block; width: 60px; height: 60px; }
+footer.footer__wrapper .footer__links {
+  grid-area: links;
+  justify-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 28px;
+  margin: 0;
+}
+footer.footer__wrapper .footer__links a { color: var(--obsidian); text-decoration: none; }
+footer.footer__wrapper .footer__links a:hover { color: var(--neon-m); }
+
+@media (max-width: 768px) {
+  footer.footer__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "links" "copy";
+    justify-items: center;
+    gap: 18px;
+    margin-top: 3em;
+    padding: 28px 16px 40px;
+    text-align: center;
+  }
+  footer.footer__wrapper .footer__copy,
+  footer.footer__wrapper .footer__links { justify-self: center; justify-content: center; }
+}

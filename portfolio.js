@@ -362,6 +362,49 @@
     });
   });
 
+  /* ---------------------------------------------------------
+     Sticky header: slides in once the top header has scrolled away.
+     On phones its links sit behind a small menu button.
+  --------------------------------------------------------- */
+  if (floatingHeader && siteHeader) {
+    const floatToggle = floatingHeader.querySelector(".floating-menu-toggle");
+    const setFloatMenu = (open) => {
+      floatingHeader.classList.toggle("menu-open", open);
+      floatToggle?.setAttribute("aria-expanded", String(open));
+    };
+    let ticking = false;
+    const updateFloating = () => {
+      ticking = false;
+      const past = siteHeader.getBoundingClientRect().bottom < 0;
+      const show = past && !siteHeader.classList.contains("menu-open");
+      floatingHeader.classList.toggle("show", show);
+      if (!show) setFloatMenu(false);
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateFloating); }
+    }, { passive: true });
+    window.addEventListener("resize", updateFloating);
+    updateFloating();
+    floatToggle?.addEventListener("click", () => setFloatMenu(!floatingHeader.classList.contains("menu-open")));
+    floatingHeader.querySelectorAll("nav a").forEach((a) => a.addEventListener("click", () => setFloatMenu(false)));
+    document.addEventListener("click", (e) => { if (!floatingHeader.contains(e.target)) setFloatMenu(false); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setFloatMenu(false); });
+  }
+
+  /* About: on phones only the first paragraph shows until "Read more" is tapped */
+  document.querySelectorAll(".about-section").forEach((section) => {
+    const more = section.querySelector(".about-more");
+    const btn = section.querySelector(".about-toggle");
+    if (!more || !btn) return;
+    section.classList.add("js-collapse");
+    btn.addEventListener("click", () => {
+      const open = section.classList.toggle("is-expanded");
+      btn.setAttribute("aria-expanded", String(open));
+      btn.textContent = open ? "Read less" : "Read more";
+      if (!open) section.scrollIntoView({ block: "start" });
+    });
+  });
+
   /* Keep the floating header from appearing while a mobile menu is open. */
   const observer = new MutationObserver(() => {
     if (siteHeader?.classList.contains("menu-open")) {
@@ -634,10 +677,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const hadFocus = stack === document.activeElement || cards.includes(document.activeElement)
         || (caption && caption === document.activeElement);
 
+      // keep the tapped project where it was on screen (otherwise other stacks closing above it,
+      // or the browser's scroll anchoring, can throw the view far past it - very visible on phones)
+      const anchorEl = () => (entry.isOpen() ? caption || cards[0] : grid || stack);
+      const header = document.querySelector("#floating-header.show");
+      const headerH = header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0;
+      const beforeTop = Math.max(anchorEl().getBoundingClientRect().top, headerH);
+
       // ONE combined animation: close the others while opening/closing this one
       const anims = flip(flipTargets(involved), () => {
         others.forEach((e) => e.applyClose());
         opening ? applyOpen() : applyClose();
+        const shift = anchorEl().getBoundingClientRect().top - beforeTop;
+        if (Math.abs(shift) > 1) window.scrollBy({ top: shift, behavior: "instant" });
       });
 
       if (hadFocus) (opening ? caption || cards[0] : stack).focus({ preventScroll: true });

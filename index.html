@@ -1,22 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5DZ2RR6S');</script>
-<!-- End Google Tag Manager -->
-    <link rel="icon" type="Gasmask-header_favicon" href="assets/favicon-04.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 1. Metadata and Tab Title -->
     <meta charset="UTF-8" />
-    <title>Gasmask ⦻ Ian Brady</title>
+    <title>Gasmask | Ian Brady</title>
     <!-- Tab title only (no styling) -->
     <meta property="og:title" content="Gasmask" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.gasmaskdesign.com"/>
+    <meta property="og:url" content="https://www.gasmaskdesign.com" />
     <meta
       property="og:description"
       content="My new portfolio website where you'll find my latest work, availability and more information about me and my services."
@@ -25,10 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="https://use.typekit.net/bub2erg.css" />
     <link rel="stylesheet" href="portfolio.css" />
   </head>
-  <body><!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DZ2RR6S"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <body>
     <header class="site-header" id="site-header">
       <div class="header-inner">
         <button
@@ -42,7 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
 
         <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-          <a onClick="window.location.href=window.location.href" aria-label="Reload the page">
+          <a href="portfolio.html" aria-label="Reload the page">
             <svg class="ico-svg" viewBox="0 0 26 26" width="26">
               <use href="assets/operator-symbol.svg"></use>
             </svg>
@@ -83,6 +72,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="header-floating__right">
             <ul class="toolbar-bts">
               <li>
+                <span
+                  class="toolbar-bts__item"
+                  data-action="click-&gt;collectable#collect">
+                  <svg class="ico-svg" viewBox="0 0 20 20" width="20">
+                    <use href="assets/bookmark-icon.svg"></use>
+                  </svg>
+                </span>
               </li>
               <li>
                 </div>
@@ -97,17 +93,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="nav-column">
               <span class="nav-kicker">Work</span>
               <a href="#work" data-clear-filters>All work</a>
-              <a href="index.html?tag=branding">Branding</a>   
-             <a href="index.html?tag=packaging">Packaging</a>
-              <a href="index.html?tag=illustration">Illustration</a>
-              <a href="index.html?tag=merch">Merch</a>
+              <a href="portfolio.html?tag=branding">Branding</a>   
+             <a href="portfolio.html?tag=packaging">Packaging</a>
+              <a href="portfolio.html?tag=illustration">Illustration</a>
+              <a href="portfolio.html?tag=merch">Merch</a>
             </div>
             <div class="nav-column">
               <span class="nav-kicker">Clients</span>
-              <a href="index.html?tag=Kinco">Kinco</a>
-              <a href="index.html?tag=Welch">Welch</a>
-              <a href="index.html?tag=Red%20Bull">Red Bull</a>
-              <a href="index.html?tag=Netflix">Netflix</a>
+              <a href="portfolio.html?tag=Kinco">Kinco</a>
+              <a href="portfolio.html?tag=Welch">Welch</a>
+              <a href="portfolio.html?tag=Red%20Bull">Red Bull</a>
+              <a href="portfolio.html?tag=Netflix">Netflix</a>
             </div>
             <div class="nav-column nav-column--note">
               <span class="nav-kicker">Gasmask</span>
@@ -153,8 +149,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       aria-label="Quick navigation"
     >
       <div class="floating-header-inner">
-        <a class="floating-logo" href="index.html">GASMASK</a>
-        <nav aria-label="Quick navigation links">
+        <a class="floating-logo" href="portfolio.html">GASMASK</a>
+        <nav id="floating-nav" aria-label="Quick navigation links">
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a
@@ -172,6 +168,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button class="floating-search-button" type="button">Search</button>
           </form>
         </div>
+        <button class="floating-menu-toggle" type="button" aria-expanded="false" aria-controls="floating-nav">
+          <span></span><span></span><span class="sr-only">Menu</span>
+        </button>
       </div>
     </header>
     <div class="block">
@@ -292,8 +291,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           decoding="async"
                           src="art/web/kinco-lifestyle.webp"
                           class="stack-contained-img"
@@ -305,8 +304,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           decoding="async"
                           src="art/web/Kinco_Thank-You-D2C_2024-054.webp"
                           class="stack-contained-img"
@@ -318,8 +317,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           decoding="async"
                           src="art/web/Kinco_Thank-You-D2C_2024-058.webp"
                           class="stack-contained-img"
@@ -331,8 +330,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           decoding="async"
                           src="art/web/Kinco_Thank-You-D2C_2024-05.webp"
                           class="stack-contained-img"
@@ -344,8 +343,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="747"
                           decoding="async"
                           src="art/web/kinco_social-post.webp"
                           class="stack-contained-img"
@@ -357,8 +356,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="700"
                           decoding="async"
                           src="art/web/kinco_social-post_2.webp"
                           class="stack-contained-img"
@@ -370,8 +369,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1055"
+                          height="1055"
                           decoding="async"
                           src="art/web/kinco_photography-editing_5.webp"
                           class="stack-contained-img"
@@ -383,8 +382,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1147"
+                          height="1147"
                           decoding="async"
                           src="art/web/kinco_photography-editing_7.webp"
                           class="stack-contained-img"
@@ -396,8 +395,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="720"
+                          height="900"
                           decoding="async"
                           src="art/web/kinco_photography-editing_3.webp"
                           class="stack-contained-img"
@@ -410,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div class="stack-content">
                         <img
                           width="1200"
-                          height="505"
+                          height="857"
                           decoding="async"
                           src="art/web/Kinco_Thank-You-D2C_2024-0516.webp"
                           class="stack-contained-img"
@@ -422,8 +421,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="927"
                           decoding="async"
                           src="art/web/Kinco_PPK-HTG-5110W_Artwork-Spec-Sheet_China.webp"
                           class="stack-contained-img"
@@ -435,8 +434,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="927"
                           decoding="async"
                           src="art/web/MRK_40FT-All-Season-(16FT-x-5FT)-Planogram_2025-07_page_1.webp"
                           class="stack-contained-img"
@@ -448,8 +447,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1275"
+                          height="1650"
                           decoding="async"
                           src="art/Linework.png"
                           class="stack-contained-img"
@@ -476,8 +475,8 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch-d2c_1f.webp"
@@ -490,22 +489,23 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="927"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Welch_Thank-You-D2C_Thumbnails.webp"
                           class="stack-contained-img"
                           alt="Welch 1"
-                          data-caption="<b>'Thank You' mailers - 'thumbnail sketch'</b> &#10; D2C, print design, text layout, illustration "
+                          data-caption="<b>'Thank You' mailers - 'thumbnail sketch'</b> &#10;
+                          D2C, print design, text layout, illustration "
                         />
                       </div>
                     </div>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch-d2c_1b.webp"
@@ -518,8 +518,8 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch-d2c_2f.webp"
@@ -532,8 +532,8 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="857"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch-d2c_2b.webp"
@@ -547,8 +547,8 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch_photography-editing_2.webp"
@@ -561,8 +561,8 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="639"
+                          height="650"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch_social.webp"
@@ -575,8 +575,8 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="752"
                           loading="lazy"
                           decoding="async"
                           src="art/web/welch_social-2.webp"
@@ -609,8 +609,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/redbullxseesee_2.webp"
@@ -623,8 +623,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/redbullxseesee_1.webp"
@@ -638,8 +638,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/redbullxseesee_3.webp"
@@ -652,8 +652,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="900"
                           loading="lazy"
                           decoding="async"
                           src="art/web/redbullxseesee_4.webp"
@@ -666,8 +666,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/redbullxseesee_5.webp"
@@ -681,7 +681,7 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                       <div class="stack-content">
                         <video
                           class="stack-contained-img"
-                          src="video/redbullxseesee.mp4"
+                          src="video/web/redbullxseesee.mp4"
                           muted
                           loop
                           playsinline
@@ -694,8 +694,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="779"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Boards2.webp"
@@ -708,8 +708,8 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="720"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Boards3.webp"
@@ -742,8 +742,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="633"
                           loading="lazy"
                           decoding="async"
                           src="art/web/netflix-layout-1.webp"
@@ -756,8 +756,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="961"
+                          height="1079"
                           loading="lazy"
                           decoding="async"
                           src="art/web/netflix-layout-2.webp"
@@ -770,8 +770,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="275"
                           loading="lazy"
                           decoding="async"
                           src="art/web/netflix-layout-3.webp"
@@ -805,8 +805,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="747"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-1.webp"
@@ -819,7 +819,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                       <div class="stack-content">
                         <img
                           width="748"
-                          height="767"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-2.webp"
@@ -831,8 +831,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="747"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-6.webp"
@@ -844,7 +844,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
+                          width="747"
                           height="767"
                           loading="lazy"
                           decoding="async"
@@ -857,7 +857,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
+                          width="747"
                           height="767"
                           loading="lazy"
                           decoding="async"
@@ -883,7 +883,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
+                          width="747"
                           height="767"
                           loading="lazy"
                           decoding="async"
@@ -922,8 +922,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="747"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-18.webp"
@@ -936,7 +936,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                       <div class="stack-content">
                         <img
                           width="748"
-                          height="767"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-20.webp"
@@ -961,8 +961,8 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="747"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-11.webp"
@@ -975,7 +975,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                       <div class="stack-content">
                         <img
                           width="748"
-                          height="767"
+                          height="766"
                           loading="lazy"
                           decoding="async"
                           src="art/web/boneyard_merch-12.webp"
@@ -996,10 +996,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                       >Boneyard Beer Summer Merch Drop · 2021</span
                     >
                     <p class="stack-caption__text">
-Commissioned by Brewery Branding Co. in the summer of 2021, 
-these are some highlights from a merch collection created for Boneyard Beer in Bend, Oregon. 
-I cut my teeth creating designs for punk and heavy bands when I was younger so merch designs like this hold a special place in my heart. 
-My hope was to bring Boneyard's loud, brash and fun style to laid-back beach days and backyard BBQs.
+Commissioned by Brewery Branding Co. in the summer of 2021, these are some highlights from a merch collection created for Boneyard Beer in Bend, Oregon. I cut my teeth creating designs for punk and heavy bands when I was younger so merch designs like this hold a special place in my heart. My hope was to bring Boneyard's loud, brash and fun style to laid-back beach days and backyard BBQs.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1013,8 +1010,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_1.webp"
@@ -1026,8 +1023,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_2.webp"
@@ -1039,8 +1036,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_3.webp"
@@ -1052,8 +1049,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="800"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/ABoard_Pearl_28X42_Construction.webp"
@@ -1065,8 +1062,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="900"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_5.webp"
@@ -1078,8 +1075,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="783"
+                          height="520"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_6.webp"
@@ -1091,8 +1088,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="367"
+                          height="301"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_7.webp"
@@ -1104,8 +1101,8 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="444"
                           loading="lazy"
                           decoding="async"
                           src="art/web/verdecocina_8.webp"
@@ -1122,18 +1119,14 @@ My hope was to bring Boneyard's loud, brash and fun style to laid-back beach day
                   </div>
 
                   <div class="stack-caption">
-                    <span class="stack-caption__meta"
-                    >Verde Cocina · 2021</span
-                    >
+                    <span class="stack-caption__meta">Verde Cocina · 2021</span>
                     <p class="stack-caption__text">
-A selection of work created for Portland’s own Verde Cocina, celebrating their fresh take on authentic Mexican cuisine. 
-I collaborated with the Verde across multiple projects, including hand-drawn chalk illustrations, menu design, signage, and digital and print assets, helping bring a cohesive visual identity to their spaces and marketing.
+A selection of work created for Portland’s own Verde Cocina, celebrating their fresh take on authentic Mexican cuisine. I collaborated with the Verde across multiple projects, including hand-drawn chalk illustrations, menu design, signage, and digital and print assets, helping bring a cohesive visual identity to their spaces and marketing.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
                 <div class="grid-item design">
-                  <!-- Velocity -->
                   <div
                     class="stack-container"
                     data-logo="logos/web/velocity.webp"
@@ -1141,8 +1134,8 @@ I collaborated with the Verde across multiple projects, including hand-drawn cha
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="619"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Velocity-artwork.webp"
@@ -1154,11 +1147,11 @@ I collaborated with the Verde across multiple projects, including hand-drawn cha
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="559"
                           loading="lazy"
                           decoding="async"
-                          src="art/web/Velocity-Keycards-02.webp"
+                          src="art/web/Velocity-artwork-2.webp"
                           class="stack-contained-img"
                           alt="Velocity ad 2"
                         />
@@ -1167,8 +1160,8 @@ I collaborated with the Verde across multiple projects, including hand-drawn cha
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="622"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Velocity-artwork-3.webp"
@@ -1189,7 +1182,8 @@ I collaborated with the Verde across multiple projects, including hand-drawn cha
                       >Velocity · 2020</span
                     >
                     <p class="stack-caption__text">
-During my time at Velocity, I thrived in a fast-paced environment where I collaborated closely with clients and sales teams to deliver impactful advertisements for small businesses within tight deadlines. This role sharpened my ability to adapt quickly and take decisive action under pressure. Many clients lacked existing assets, which gave me an opportunity to innovate with limited resources. This experience highlighted my passion for creative problem-solving and delivering results even in challenging conditions.</p>
+                      Placeholder: one or two lines about this project.
+                    </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
@@ -1202,22 +1196,22 @@ During my time at Velocity, I thrived in a fast-paced environment where I collab
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="678"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Complexcon_Robin_Hood_Mock+Moodboard_2.webp"
                           class="stack-contained-img"
                           alt="complexcon 1"
-                          data-caption="<b>Mock-up for large-scale print design at the Robin Hood booth - ComplexCon 2018 &#10;</b> print design, prepress production"
+                          data-caption="<b>Mock-up for large-scale print design at the Robin Hood booth - ComplexCon 2018&#10;</b> print design, prepress production"
                         />
                       </div>
                     </div>
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1123"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Complexcon_Robin_Hood_Mock+Moodboard_1.webp"
@@ -1230,8 +1224,8 @@ During my time at Velocity, I thrived in a fast-paced environment where I collab
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="750"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Complexcon_hertake_menu.webp"
@@ -1244,8 +1238,8 @@ During my time at Velocity, I thrived in a fast-paced environment where I collab
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="900"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/Complexcon_Reign-BarMenu.webp"
@@ -1278,8 +1272,8 @@ A collection of print collateral  design projects created for ComplexCon 2018, s
                                       <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="660"
                           loading="lazy"
                           decoding="async"
                           src="art/web/app-logo_design-04.webp"
@@ -1292,8 +1286,8 @@ data-caption="<b>Wallpaper design for Versus &#10;</b> digital design, branding,
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="936"
+                          height="806"
                           loading="lazy"
                           decoding="async"
                           src="art/web/app-logo_design-01.webp"
@@ -1306,8 +1300,8 @@ data-caption="<b>Wallpaper design for Versus &#10;</b> digital design, branding,
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="433"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/app-logo_design-03.webp"
@@ -1320,8 +1314,8 @@ data-caption="<b>Preliminary wireframe design for Versus &#10;</b> digital desig
                                                           <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="936"
+                          height="357"
                           loading="lazy"
                           decoding="async"
                           src="art/web/app-logo_design-02.webp"
@@ -1341,8 +1335,8 @@ data-caption="<b>Preliminary wireframe design for Versus &#10;</b> digital desig
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Versus Social Media App · 2016</span>
                     <p class="stack-caption__text">
-Versus was an early-stage social media app conceived as a competitor to Musical.ly, now known as TikTok. The platform was designed to let users share videos and compete against one another, or “verse” each other. I was contracted during initial development and contributed to foundational brand identity, including logo design, color palette, basic wireframes, and brainstorming around app functionality.
-This project was an opportunity to tackle branding and initial product design early in my career. Despite positive reception in initial testing, Versus ultimately remained in developer limbo and never launched publicly.
+Versus was an early-stage social media app conceived as a competitor to Musical.ly, now known as TikTok. The platform was designed to let users share videos and compete against one another, or “verse” each other. I was contracted on the project during its initial development and contributed to foundational brand identity, including logo design, color palette, basic wireframes, and brainstorming around app functionality.
+This project was an exciting opportunity to tackle branding and initial-stage product design early in my career. Despite positive reception during initial testing, Versus ultimately remained in developer limbo and never launched publicly.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1356,8 +1350,8 @@ This project was an opportunity to tackle branding and initial product design ea
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="676"
                           loading="lazy"
                           decoding="async"
                           src="art/web/outsource_1-01.webp"
@@ -1370,8 +1364,8 @@ This project was an opportunity to tackle branding and initial product design ea
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="676"
                           loading="lazy"
                           decoding="async"
                           src="art/web/outsource_1-02.webp"
@@ -1384,8 +1378,8 @@ This project was an opportunity to tackle branding and initial product design ea
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1200"
+                          height="1137"
                           loading="lazy"
                           decoding="async"
                           src="art/web/outsource_1-03.webp"
@@ -1405,9 +1399,9 @@ This project was an opportunity to tackle branding and initial product design ea
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Outsource.IO · 2016</span>
                     <p class="stack-caption__text">
-While working at Checkmate Creations, I helped develop the branding and initial web design for Outsource.IO, a platform for connecting businesses with creative specialists.
+While working as a designer at Checkmate Creations (later shortened to Checkmate), I was tasked with developing the branding and initial web design for Outsource.IO, a platform designed to connect businesses with the specialists they needed, from artists and developers to copywriters and other creative professionals.
 The client had just one request for the branding: green. At a time when major social platforms were becoming instantly recognizable by their signature colors, the challenge was to create an identity that felt distinctive in an increasingly crowded app market.
-The concept of finding the right person to seamlessly blend into a company's team led me to the chameleon logo. 
+The concept of finding the right person to seamlessly blend into a company's team led me to the chameleon logo, which was enthusiastically received by the client. A fun project that tackled brand strategy, visual identity, and early-stage web design.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1421,8 +1415,8 @@ The concept of finding the right person to seamlessly blend into a company's tea
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="1080"
+                          height="1080"
                           loading="lazy"
                           decoding="async"
                           src="art/web/big-cheese-tees_1.webp"
@@ -1435,8 +1429,8 @@ data-caption="<b>Modeling <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digit
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="748"
-                          height="767"
+                          width="640"
+                          height="640"
                           loading="lazy"
                           decoding="async"
                           src="art/web/big-cheese-tees_2.webp"
@@ -1485,8 +1479,8 @@ An illustration created for Big Cheese Tees, a Disney-inspired apparel and merch
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1117"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/fftb-skull logo.webp"
@@ -1499,8 +1493,8 @@ data-caption="<b>FFTB 'Skull Logo' &#10;</b> digital design, illustration, typog
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="640"
-                          height="640"
+                          width="1200"
+                          height="529"
                           loading="lazy"
                           decoding="async"
                           src="art/web/fftb_shirt-x.webp"
@@ -1513,8 +1507,8 @@ data-caption="<b>FFTB 'Skull Logo' &#10;</b> digital design, illustration, typog
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="752"
                           loading="lazy"
                           decoding="async"
                           src="art/web/fftb_shirt-x2.webp"
@@ -1547,8 +1541,8 @@ As a young artist, creating logos, merchandise, and album artwork for local band
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="640"
+                          height="428"
                           loading="lazy"
                           decoding="async"
                           src="art/web/cobain_3.webp"
@@ -1565,7 +1559,7 @@ data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoa
                           height="640"
                           loading="lazy"
                           decoding="async"
-                          src="video/sketching_720p.mp4"
+                          src="video/web/sketching_720p.mp4"
                           class="stack-contained-img"
                           alt="41 Global vid"
 data-caption="<b>Portrait illustration - process video &#10;</b> illustration, charcoal"
@@ -1575,8 +1569,8 @@ data-caption="<b>Portrait illustration - process video &#10;</b> illustration, c
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="900"
                           loading="lazy"
                           decoding="async"
                           src="art/web/cobain_1.webp"
@@ -1589,8 +1583,8 @@ data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoa
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="941"
                           loading="lazy"
                           decoding="async"
                           src="art/web/cobain_2.webp"
@@ -1625,8 +1619,8 @@ This project began as a commission for a charcoal portrait of Kurt Cobain, based
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1024"
                           loading="lazy"
                           decoding="async"
                           src="art/web/helmet_design-1.webp"
@@ -1653,8 +1647,8 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/helmet_1.webp"
@@ -1667,8 +1661,8 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/helmet_2.webp"
@@ -1681,8 +1675,8 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/helmet_3.webp"
@@ -1695,8 +1689,8 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/helmet_4.webp"
@@ -1709,8 +1703,8 @@ data-caption="<b>Helmet design - front &#10;</b> illustration, acrylic"
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1199"
                           loading="lazy"
                           decoding="async"
                           src="art/web/helmet_5.webp"
@@ -1748,7 +1742,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                       <div class="stack-content">
                         <img
                           width="1200"
-                          height="275"
+                          height="624"
                           loading="lazy"
                           decoding="async"
                           src="art/web/dowco_concept_1.webp"
@@ -1761,7 +1755,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                       <div class="stack-content">
                         <img
                           width="1200"
-                          height="633"
+                          height="624"
                           loading="lazy"
                           decoding="async"
                           src="art/web/dowco_concept_2.webp"
@@ -1774,7 +1768,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                       <div class="stack-content">
                         <img
                           width="1200"
-                          height="275"
+                          height="624"
                           loading="lazy"
                           decoding="async"
                           src="art/web/dowco_concept_3.webp"
@@ -1805,8 +1799,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/society-6-designs.webp"
@@ -1819,8 +1813,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                       <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/society-6-designs-2.webp"
@@ -1833,8 +1827,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                                                                                 <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/society-6-designs-05.webp"
@@ -1847,8 +1841,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                                         <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/society-6-designs-03.webp"
@@ -1861,8 +1855,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                                         <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/society-6-designs-04.webp"
@@ -1875,8 +1869,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-01.webp"
@@ -1889,8 +1883,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-02.webp"
@@ -1903,8 +1897,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-03.webp"
@@ -1917,8 +1911,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-04.webp"
@@ -1931,8 +1925,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-06.webp"
@@ -1945,8 +1939,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-07.webp"
@@ -1958,8 +1952,8 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                                         <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-07.webp"
@@ -1972,8 +1966,8 @@ data-caption="<b>Neo-American-Traditional Flash - 'Raven' &#10;</b> illustration
                                         <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-08.webp"
@@ -1986,8 +1980,8 @@ data-caption="<b>Neo-American-Traditional Flash - 'Hellhound' &#10;</b> illustra
                                         <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="1200"
+                          height="801"
                           loading="lazy"
                           decoding="async"
                           src="art/web/flashsheet-09.webp"
@@ -2020,8 +2014,8 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                       <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="640"
+                          height="640"
                           loading="lazy"
                           decoding="async"
                           src="art/web/print-making_1.webp"
@@ -2033,8 +2027,8 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="640"
+                          height="640"
                           loading="lazy"
                           decoding="async"
                           src="art/web/print-making_6.webp"
@@ -2047,8 +2041,8 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="640"
+                          height="640"
                           loading="lazy"
                           decoding="async"
                           src="art/web/print-making_2.webp"
@@ -2061,8 +2055,8 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                                         <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="640"
+                          height="640"
                           loading="lazy"
                           decoding="async"
                           src="art/web/print-making_3.webp"
@@ -2136,8 +2130,8 @@ These examples showcase my experience across both traditional and modern printma
                       <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="914"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/muses.webp"
@@ -2150,8 +2144,8 @@ These examples showcase my experience across both traditional and modern printma
                     <div class="card">
                       <div class="stack-content">
                         <img
-                          width="1080"
-                          height="1080"
+                          width="914"
+                          height="1200"
                           loading="lazy"
                           decoding="async"
                           src="art/web/happiness-and-self-destruction.webp"
@@ -2188,53 +2182,35 @@ A collection of personal watermedia paintings exploring the themes and imagery t
               id="about"
               aria-labelledby="about-work-title"
             >
-              <div class="section-heading-centered">
+              <div class="section-heading">
                 <span id="about-work-title">About</span>
               </div>
-              <p class="about-section">
-I’m a Portland, Oregon-based designer and illustrator with professional experience in creative fields dating back to 2016. My work spans graphic design, illustration, print production, packaging, digital media, and brand development, with a particular passion for print collateral and visual storytelling. I’ve collaborated with creative teams, led design projects, and worked across a range of industries, translating conceptual ideas into cohesive visual identities and engaging design assets.
-As a hands-on, collaborative designer, I bring a balance of creative exploration and practical production knowledge to every project. From illustration and image editing to prepress and packaging, I enjoy finding thoughtful, effective ways to bring ideas to life across both print and digital platforms.
-Outside of design, my work and creative perspective are heavily influenced by the creative culture around me, punk and hardcore music, horror films, tattoo culture, as well as a broader interest in activism, social and political injustice, and environmental consciousness. These influences continually shape how I approach visual storytelling, encouraging me to create work that feels expressive, intentional, and connected to the world around me.
-              </p>
+              <div class="about-text">
+                <p>I’m a Portland, Oregon-based designer and illustrator with professional experience in creative fields dating back to 2016. My work spans graphic design, illustration, print production, packaging, digital media, and brand development, with a particular passion for print collateral and visual storytelling. I’ve collaborated with creative teams, led design projects, and worked across a range of industries, translating conceptual ideas into cohesive visual identities and engaging design assets.</p>
+                <div class="about-more" id="about-more">
+                  <p>As a hands-on, collaborative designer, I bring a balance of creative exploration and practical production knowledge to every project. From illustration and image editing to prepress and packaging, I enjoy finding thoughtful, effective ways to bring ideas to life across both print and digital platforms.</p>
+                  <p>Outside of design, my work and creative perspective are heavily influenced by the creative culture around me, punk and hardcore music, horror films, tattoo culture, as well as a broader interest in activism, social and political injustice, and environmental consciousness. These influences continually shape how I approach visual storytelling, encouraging me to create work that feels expressive, intentional, and connected to the world around me.</p>
+                </div>
+                <button class="about-toggle" type="button" aria-expanded="false" aria-controls="about-more">Read more</button>
+              </div>
             </section>
 
             <footer class="footer__wrapper" id="contact">
-              <div style="font-weight: bold">© Ian Brady / Gasmask</div>
-              <nav aria-label="Social links">
-                <a href="#site-header">
-                  <p class="footer__logo">
-                    <img
-                      src="assets/gasmaskcoin.gif"
-                      alt="gasmask coin"
-                      width="60"
-                      height="60"
-                    />
-                  </p>
+                <a class="footer__logo" href="#site-header" aria-label="Back to top">
+                  <img src="assets/gasmaskcoin.gif" alt="gasmask coin" width="60" height="60" />
                 </a>
-                <a
-                  href="https://instagram.com/gasmask.pdx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Instagram</a
-                >
-                <a
-                  href="https://linkedin.com/in/iantbrady"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn</a
-                >
-                <a
-                  href="https://www.behance.net/Iantbrady"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Bēhance</a
-                >
-              </nav>
-            </footer>
+                <nav class="footer__links" aria-label="Social links">
+                  <a href="https://instagram.com/gasmask.pdx" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a href="https://linkedin.com/in/iantbrady" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href="https://www.behance.net/Iantbrady" target="_blank" rel="noopener noreferrer">Bēhance</a>
+                </nav>
+                <div class="footer__copy">© Ian Brady / Gasmask</div>
+              </footer>
           </div>
         </div>
       </div>
     </div>
+
     <div class="search-panel" id="search-panel" aria-hidden="true">
       <div class="search-panel-inner">
         <div class="search-panel-top">
