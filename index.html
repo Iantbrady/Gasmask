@@ -31,7 +31,14 @@
         </button>
 
         <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-          <a href="index.html" aria-label="Refresh the page" onclick="window.location.href=window.location.href.split('#')[0]; return false;">
+          <a
+            href="index.html"
+            aria-label="Refresh the page"
+            onclick="
+              window.location.href = window.location.href.split('#')[0];
+              return false;
+            "
+          >
             <svg class="ico-svg" viewBox="0 0 26 26" width="26">
               <use href="assets/operator-symbol.svg"></use>
             </svg>
@@ -73,8 +80,8 @@
             <div class="nav-column">
               <span class="nav-kicker">Work</span>
               <a href="#work" data-clear-filters>All work</a>
-              <a href="index.html?tag=branding">Branding</a>   
-             <a href="index.html?tag=packaging">Packaging</a>
+              <a href="index.html?tag=branding">Branding</a>
+              <a href="index.html?tag=packaging">Packaging</a>
               <a href="index.html?tag=illustration">Illustration</a>
               <a href="index.html?tag=merch">Merch</a>
             </div>
@@ -184,11 +191,12 @@
                         <figure class="avatar-name">
                           <a
                             class="avatar-name__link"
-                            href="assets/Ian-Brady_Resume+Examples.pdf"
-                            download="Ian-Brady_Resume+Examples.pdf"
-                            aria-label="PDF download"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="assets/Gasmask_PDF-Portfolio.pdf"
+                            data-doc-pages="assets/Gasmask_PDF-Portfolio-01.webp assets/Gasmask_PDF-Portfolio-02.webp assets/Gasmask_PDF-Portfolio-03.webp assets/Gasmask_PDF-Portfolio-04.webp assets/Gasmask_PDF-Portfolio-05.webp assets/Gasmask_PDF-Portfolio-06.webp"
+                            data-doc-title="Ian Brady — PDF-Portfolio"
+                            data-doc-download="Gasmask_PDF-Portfolio.pdf"
+                            aria-label="PDF Portfolio (opens a preview with a PDF download)"
+                            aria-haspopup="dialog"
                           >
                             <div class="avatar-name__img-container">
                               <img
@@ -234,7 +242,10 @@
                 </div>
               </div>
               <div class="photo-grid">
-                <div class="grid-item design" data-keywords="clothing merch outdoor">
+                <div
+                  class="grid-item design"
+                  data-keywords="clothing merch outdoor"
+                >
                   <!-- Kinco Grid Item -->
                   <div class="stack-container" data-logo="logos/web/kinco.webp">
                     <div class="card">
@@ -414,8 +425,16 @@
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Kinco · 2021-2026</span>
                     <p class="stack-caption__text">
-A selection of work from my time at Kinco Gloves, spanning photo and video editing, print design, packaging, sales presentations, and web design, alongside production workflow improvements and impactful marketing initiatives. I especially enjoyed creating content for Kinco’s cult following within the snow sports community and celebrating independent artists who transform their gloves into one-of-a-kind works of art.                    
-</p><span class="stack-caption__link">Collapse project</span>
+                      A selection of work from my time at Kinco Gloves, spanning
+                      photo and video editing, print design, packaging, sales
+                      presentations, and web design, alongside production
+                      workflow improvements and impactful marketing initiatives.
+                      I especially enjoyed creating content for Kinco’s cult
+                      following within the snow sports community and celebrating
+                      independent artists who transform their gloves into
+                      one-of-a-kind works of art.
+                    </p>
+                    <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
                 <div class="grid-item design">
@@ -489,7 +508,6 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                           class="stack-contained-img"
                           alt="Welch 4"
                           data-caption="<b>'Thank You' mailers - var 2 'Back'</b> &#10; D2C, Photo-editing, print design, copywriting, text layout"
-
                         />
                       </div>
                     </div>
@@ -544,7 +562,12 @@ A selection of work from my time at Kinco Gloves, spanning photo and video editi
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Welch · 2021-2026</span>
                     <p class="stack-caption__text">
-A selection of work from my time with Welch Suspender, spanning photo editing, brand-aligned print and digital design, packaging, sales presentations, and integrated web design. My work also supported streamlined production workflows and cohesive marketing efforts, helping maintain a consistent brand identity across customer touchpoints.
+                      A selection of work from my time with Welch Suspender,
+                      spanning photo editing, brand-aligned print and digital
+                      design, packaging, sales presentations, and integrated web
+                      design. My work also supported streamlined production
+                      workflows and cohesive marketing efforts, helping maintain
+                      a consistent brand identity across customer touchpoints.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -580,7 +603,6 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                           class="stack-contained-img"
                           alt="red bull 2"
                           data-caption="<b>Red Bull x SEE SEE Motor Coffee&#10;</b> illustration, acrylic paint"
-
                         />
                       </div>
                     </div>
@@ -650,7 +672,7 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                           src="art/web/Boards2.webp"
                           class="stack-contained-img"
                           alt="red bull 7"
-                data-caption="<b>menu design Kornblatt’s Delicatessen - Portland, OR&#10;</b> illustration, chalk, chalk-marker"
+                          data-caption="<b>menu design Kornblatt’s Delicatessen - Portland, OR&#10;</b> illustration, chalk, chalk-marker"
                         />
                       </div>
                     </div>
@@ -664,7 +686,7 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                           src="art/web/Boards3.webp"
                           class="stack-contained-img"
                           alt="red bull 8"
-                        data-caption="<b>menu design Kornblatt’s Delicatessen - Portland, OR&#10;</b> illustration, chalk, chalk-marker"
+                          data-caption="<b>menu design Kornblatt’s Delicatessen - Portland, OR&#10;</b> illustration, chalk, chalk-marker"
                         />
                       </div>
                     </div>
@@ -677,11 +699,18 @@ A selection of work from my time with Welch Suspender, spanning photo editing, b
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Red Bull · 2021</span>
                     <p class="stack-caption__text">
-As a contract artist for Red Bull, I created custom artwork for restaurants, bars, and events throughout Portland, Oregon, bringing bold visuals and hands-on artistic expression to local spaces and experiences.&#10;
-One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE Motor Coffee collab at the One Moto Show, inspired by motorcycle culture, old-school tattoo flash, and PDX’s devoted coffee community.</p>
+                      As a contract artist for Red Bull, I created custom
+                      artwork for restaurants, bars, and events throughout
+                      Portland, Oregon, bringing bold visuals and hands-on
+                      artistic expression to local spaces and experiences.&#10;
+                      One of my favorite pieces is the live acrylic painting as
+                      a Red Bull x SEE SEE Motor Coffee collab at the One Moto
+                      Show, inspired by motorcycle culture, old-school tattoo
+                      flash, and PDX’s devoted coffee community.
+                    </p>
                     <span class="stack-caption__link">Collapse project</span>
-</div>
-</div>
+                  </div>
+                </div>
                 <div class="grid-item design">
                   <!-- Netflix -->
                   <div
@@ -698,7 +727,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                           src="art/web/netflix-layout-1.webp"
                           class="stack-contained-img"
                           alt="Netflix 1"
-                     data-caption="<b>mock-up for large-scale print design at the Netflix booth - ComplexCon 2018&#10;</b> print design, prepress production"
+                          data-caption="<b>mock-up for large-scale print design at the Netflix booth - ComplexCon 2018&#10;</b> print design, prepress production"
                         />
                       </div>
                     </div>
@@ -712,7 +741,7 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                           src="art/web/netflix-layout-2.webp"
                           class="stack-contained-img"
                           alt="Netflix 2"
-                        data-caption="<b>large-scale print design at the Netflix booth - ComplexCon 2018&#10;</b> print design, prepress production"
+                          data-caption="<b>large-scale print design at the Netflix booth - ComplexCon 2018&#10;</b> print design, prepress production"
                         />
                       </div>
                     </div>
@@ -740,7 +769,12 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Netflix · 2018</span>
                     <p class="stack-caption__text">
-                      Print design created for Netflix’s booth at ComplexCon 2018, promoting <i>Patriot Act with Hasan Minhaj</i>. A great opportunity to collaborate with a creative team on a high-visibility project, bringing the show’s visual identity to an immersive experience for a culture-driven audience.
+                      Print design created for Netflix’s booth at ComplexCon
+                      2018, promoting <i>Patriot Act with Hasan Minhaj</i>. A
+                      great opportunity to collaborate with a creative team on a
+                      high-visibility project, bringing the show’s visual
+                      identity to an immersive experience for a culture-driven
+                      audience.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -945,7 +979,13 @@ One of my favorite pieces is the live acrylic painting as a Red Bull x SEE SEE M
                       >Boneyard Beer Summer Merch Drop · 2021</span
                     >
                     <p class="stack-caption__text">
-Commissioned by Brewery Branding Co. in the summer of 2021, these are some highlights from a merch collection created for Boneyard Beer in Bend, Oregon. I cut my teeth creating designs for punk and heavy bands when I was younger so merch designs like this hold a special place in my heart. My hope was to bring Boneyard's loud, brash and fun style to laid-back beach days and backyard BBQs.
+                      Commissioned by Brewery Branding Co. in the summer of
+                      2021, these are some highlights from a merch collection
+                      created for Boneyard Beer in Bend, Oregon. I cut my teeth
+                      creating designs for punk and heavy bands when I was
+                      younger so merch designs like this hold a special place in
+                      my heart. My hope was to bring Boneyard's loud, brash and
+                      fun style to laid-back beach days and backyard BBQs.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1070,7 +1110,13 @@ Commissioned by Brewery Branding Co. in the summer of 2021, these are some highl
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Verde Cocina · 2021</span>
                     <p class="stack-caption__text">
-A selection of work created for Portland’s own Verde Cocina, celebrating their fresh take on authentic Mexican cuisine. I collaborated with the Verde across multiple projects, including hand-drawn chalk illustrations, menu design, signage, and digital and print assets, helping bring a cohesive visual identity to their spaces and marketing.
+                      A selection of work created for Portland’s own Verde
+                      Cocina, celebrating their fresh take on authentic Mexican
+                      cuisine. I collaborated with the Verde across multiple
+                      projects, including hand-drawn chalk illustrations, menu
+                      design, signage, and digital and print assets, helping
+                      bring a cohesive visual identity to their spaces and
+                      marketing.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1127,9 +1173,7 @@ A selection of work created for Portland’s own Verde Cocina, celebrating their
                   </div>
 
                   <div class="stack-caption">
-                    <span class="stack-caption__meta"
-                      >Velocity · 2020</span
-                    >
+                    <span class="stack-caption__meta">Velocity · 2020</span>
                     <p class="stack-caption__text">
                       Placeholder: one or two lines about this project.
                     </p>
@@ -1180,7 +1224,7 @@ A selection of work created for Portland’s own Verde Cocina, celebrating their
                           src="art/web/Complexcon_hertake_menu.webp"
                           class="stack-contained-img"
                           alt="complexcon 3"
-                         data-caption="<b>'Nail Menu' print design for HerTake - ComplexCon 2018&#10;</b> print design, prepress production, typography"
+                          data-caption="<b>'Nail Menu' print design for HerTake - ComplexCon 2018&#10;</b> print design, prepress production, typography"
                         />
                       </div>
                     </div>
@@ -1194,7 +1238,7 @@ A selection of work created for Portland’s own Verde Cocina, celebrating their
                           src="art/web/Complexcon_Reign-BarMenu.webp"
                           class="stack-contained-img"
                           alt="complexcon 4"
-                    data-caption="<b>'Bar Menu' print design for Reign - ComplexCon 2018&#10;</b> print design, prepress production, typography"
+                          data-caption="<b>'Bar Menu' print design for Reign - ComplexCon 2018&#10;</b> print design, prepress production, typography"
                         />
                       </div>
                     </div>
@@ -1208,7 +1252,11 @@ A selection of work created for Portland’s own Verde Cocina, celebrating their
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Complexcon · 2018</span>
                     <p class="stack-caption__text">
-A collection of print collateral  design projects created for ComplexCon 2018, spanning from small-scale menu design for HerTake and REIGN to large-scale booth experiences for Robin Hood, Born x Raised, and Nipsey Hussle.</p>
+                      A collection of print collateral design projects created
+                      for ComplexCon 2018, spanning from small-scale menu design
+                      for HerTake and REIGN to large-scale booth experiences for
+                      Robin Hood, Born x Raised, and Nipsey Hussle.
+                    </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
@@ -1218,7 +1266,7 @@ A collection of print collateral  design projects created for ComplexCon 2018, s
                     class="stack-container"
                     data-logo="logos/web/VS-logo.webp"
                   >
-                                      <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1228,7 +1276,7 @@ A collection of print collateral  design projects created for ComplexCon 2018, s
                           src="art/web/app-logo_design-04.webp"
                           class="stack-contained-img"
                           alt="Versus 4"
-data-caption="<b>Wallpaper design for Versus &#10;</b> digital design, branding, typography"
+                          data-caption="<b>Wallpaper design for Versus &#10;</b> digital design, branding, typography"
                         />
                       </div>
                     </div>
@@ -1256,11 +1304,11 @@ data-caption="<b>Wallpaper design for Versus &#10;</b> digital design, branding,
                           src="art/web/app-logo_design-03.webp"
                           class="stack-contained-img"
                           alt="Versus 3"
-data-caption="<b>Preliminary wireframe design for Versus &#10;</b> digital design, branding, typography, app development, wireframe"
+                          data-caption="<b>Preliminary wireframe design for Versus &#10;</b> digital design, branding, typography, app development, wireframe"
                         />
                       </div>
                     </div>
-                                                          <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="936"
@@ -1270,7 +1318,7 @@ data-caption="<b>Preliminary wireframe design for Versus &#10;</b> digital desig
                           src="art/web/app-logo_design-02.webp"
                           class="stack-contained-img"
                           alt="Versus 2"
-                    data-caption="<b>Logo design for Versus &#10;</b> digital design, branding, typography, logo"
+                          data-caption="<b>Logo design for Versus &#10;</b> digital design, branding, typography, logo"
                         />
                       </div>
                     </div>
@@ -1282,10 +1330,23 @@ data-caption="<b>Preliminary wireframe design for Versus &#10;</b> digital desig
                   </div>
 
                   <div class="stack-caption">
-                    <span class="stack-caption__meta">Versus Social Media App · 2016</span>
+                    <span class="stack-caption__meta"
+                      >Versus Social Media App · 2016</span
+                    >
                     <p class="stack-caption__text">
-Versus was an early-stage social media app conceived as a competitor to Musical.ly, now known as TikTok. The platform was designed to let users share videos and compete against one another, or “verse” each other. I was contracted on the project during its initial development and contributed to foundational brand identity, including logo design, color palette, basic wireframes, and brainstorming around app functionality.
-This project was an exciting opportunity to tackle branding and initial-stage product design early in my career. Despite positive reception during initial testing, Versus ultimately remained in developer limbo and never launched publicly.
+                      Versus was an early-stage social media app conceived as a
+                      competitor to Musical.ly, now known as TikTok. The
+                      platform was designed to let users share videos and
+                      compete against one another, or “verse” each other. I was
+                      contracted on the project during its initial development
+                      and contributed to foundational brand identity, including
+                      logo design, color palette, basic wireframes, and
+                      brainstorming around app functionality. This project was
+                      an exciting opportunity to tackle branding and
+                      initial-stage product design early in my career. Despite
+                      positive reception during initial testing, Versus
+                      ultimately remained in developer limbo and never launched
+                      publicly.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1306,7 +1367,7 @@ This project was an exciting opportunity to tackle branding and initial-stage pr
                           src="art/web/outsource_1-01.webp"
                           class="stack-contained-img"
                           alt="IO 1"
-              data-caption="<b>Splash page for Outsource.IO &#10;</b> digital design, branding, web design"
+                          data-caption="<b>Splash page for Outsource.IO &#10;</b> digital design, branding, web design"
                         />
                       </div>
                     </div>
@@ -1320,7 +1381,7 @@ This project was an exciting opportunity to tackle branding and initial-stage pr
                           src="art/web/outsource_1-02.webp"
                           class="stack-contained-img"
                           alt="IO 2"
-           data-caption="<b>Web page for Outsource.IO &#10;</b> digital design, branding, web design"
+                          data-caption="<b>Web page for Outsource.IO &#10;</b> digital design, branding, web design"
                         />
                       </div>
                     </div>
@@ -1334,7 +1395,7 @@ This project was an exciting opportunity to tackle branding and initial-stage pr
                           src="art/web/outsource_1-03.webp"
                           class="stack-contained-img"
                           alt="IO 3"
-          data-caption="<b>Logo for Outsource.IO &#10;</b> digital design, branding, web design, logo"
+                          data-caption="<b>Logo for Outsource.IO &#10;</b> digital design, branding, web design, logo"
                         />
                       </div>
                     </div>
@@ -1348,9 +1409,21 @@ This project was an exciting opportunity to tackle branding and initial-stage pr
                   <div class="stack-caption">
                     <span class="stack-caption__meta">Outsource.IO · 2016</span>
                     <p class="stack-caption__text">
-While working as a designer at Checkmate Creations (later shortened to Checkmate), I was tasked with developing the branding and initial web design for Outsource.IO, a platform designed to connect businesses with the specialists they needed, from artists and developers to copywriters and other creative professionals.
-The client had just one request for the branding: green. At a time when major social platforms were becoming instantly recognizable by their signature colors, the challenge was to create an identity that felt distinctive in an increasingly crowded app market.
-The concept of finding the right person to seamlessly blend into a company's team led me to the chameleon logo, which was enthusiastically received by the client. A fun project that tackled brand strategy, visual identity, and early-stage web design.
+                      While working as a designer at Checkmate Creations (later
+                      shortened to Checkmate), I was tasked with developing the
+                      branding and initial web design for Outsource.IO, a
+                      platform designed to connect businesses with the
+                      specialists they needed, from artists and developers to
+                      copywriters and other creative professionals. The client
+                      had just one request for the branding: green. At a time
+                      when major social platforms were becoming instantly
+                      recognizable by their signature colors, the challenge was
+                      to create an identity that felt distinctive in an
+                      increasingly crowded app market. The concept of finding
+                      the right person to seamlessly blend into a company's team
+                      led me to the chameleon logo, which was enthusiastically
+                      received by the client. A fun project that tackled brand
+                      strategy, visual identity, and early-stage web design.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1371,7 +1444,7 @@ The concept of finding the right person to seamlessly blend into a company's tea
                           src="art/web/big-cheese-tees_1.webp"
                           class="stack-contained-img"
                           alt="Big Cheese Tees merch 1"
-data-caption="<b>Modeling <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digital design, illustration, prepress production, apparel, typography"
+                          data-caption="<b>Modeling <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digital design, illustration, prepress production, apparel, typography"
                         />
                       </div>
                     </div>
@@ -1385,7 +1458,7 @@ data-caption="<b>Modeling <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digit
                           src="art/web/big-cheese-tees_2.webp"
                           class="stack-contained-img"
                           alt="Big Cheese Tees merch 2"
-                  data-caption="<b>Mock-up for <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digital design, illustration, prepress production, apparel, typography"
+                          data-caption="<b>Mock-up for <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digital design, illustration, prepress production, apparel, typography"
                         />
                       </div>
                     </div>
@@ -1414,7 +1487,13 @@ data-caption="<b>Modeling <i>'Happy Haunts Happy Hour'</i> shirt &#10;</b> digit
                       >Big Cheese Tees · 2019</span
                     >
                     <p class="stack-caption__text">
-An illustration created for Big Cheese Tees, a Disney-inspired apparel and merchandise brand catering to the dedicated fanbase now affectionately known as “Disney Adults.” Inspired by the iconic Haunted Mansion attraction, I wanted to celebrate Disney’s spookier side and the enduring appeal of its beloved, haunt-worthy aesthetic.
+                      An illustration created for Big Cheese Tees, a
+                      Disney-inspired apparel and merchandise brand catering to
+                      the dedicated fanbase now affectionately known as “Disney
+                      Adults.” Inspired by the iconic Haunted Mansion
+                      attraction, I wanted to celebrate Disney’s spookier side
+                      and the enduring appeal of its beloved, haunt-worthy
+                      aesthetic.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
@@ -1435,7 +1514,7 @@ An illustration created for Big Cheese Tees, a Disney-inspired apparel and merch
                           src="art/web/fftb-skull logo.webp"
                           class="stack-contained-img"
                           alt="FFTB-1"
-data-caption="<b>FFTB 'Skull Logo' &#10;</b> digital design, illustration, typography"
+                          data-caption="<b>FFTB 'Skull Logo' &#10;</b> digital design, illustration, typography"
                         />
                       </div>
                     </div>
@@ -1479,14 +1558,26 @@ data-caption="<b>FFTB 'Skull Logo' &#10;</b> digital design, illustration, typog
                       >Fortune Favors The Bold · 2015</span
                     >
                     <p class="stack-caption__text">
-As a young artist, creating logos, merchandise, and album artwork for local bands was one of my biggest passions and an introduction to the world of graphic design. My work for the hardcore band Fortune Favors the Bold was no exception. This experience helped shape my early design practice, introducing me to Adobe Photoshop and Illustrator while teaching me the fundamentals of prepress production and asset management, particularly for apparel. This collection features logo development, T-shirt graphics, and hoodie designs created for the band.
+                      As a young artist, creating logos, merchandise, and album
+                      artwork for local bands was one of my biggest passions and
+                      an introduction to the world of graphic design. My work
+                      for the hardcore band Fortune Favors the Bold was no
+                      exception. This experience helped shape my early design
+                      practice, introducing me to Adobe Photoshop and
+                      Illustrator while teaching me the fundamentals of prepress
+                      production and asset management, particularly for apparel.
+                      This collection features logo development, T-shirt
+                      graphics, and hoodie designs created for the band.
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
                 <div class="grid-item illustration">
                   <!-- 41 Global Item -->
-                  <div class="stack-container" data-logo="logos/web/commission_logo.webp">
+                  <div
+                    class="stack-container"
+                    data-logo="logos/web/commission_logo.webp"
+                  >
                     <div class="card">
                       <div class="stack-content">
                         <img
@@ -1497,7 +1588,7 @@ As a young artist, creating logos, merchandise, and album artwork for local band
                           src="art/web/cobain_3.webp"
                           class="stack-contained-img"
                           alt="41 Global 1"
-data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoal"
+                          data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoal"
                         />
                       </div>
                     </div>
@@ -1511,7 +1602,7 @@ data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoa
                           src="video/web/sketching_720p.mp4"
                           class="stack-contained-img"
                           alt="41 Global vid"
-data-caption="<b>Portrait illustration - process video &#10;</b> illustration, charcoal"
+                          data-caption="<b>Portrait illustration - process video &#10;</b> illustration, charcoal"
                         ></video>
                       </div>
                     </div>
@@ -1525,7 +1616,7 @@ data-caption="<b>Portrait illustration - process video &#10;</b> illustration, c
                           src="art/web/cobain_1.webp"
                           class="stack-contained-img"
                           alt="41 Global 2"
-data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoal, digital design, prepress production, apparel"
+                          data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoal, digital design, prepress production, apparel"
                         />
                       </div>
                     </div>
@@ -1539,7 +1630,7 @@ data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoa
                           src="art/web/cobain_2.webp"
                           class="stack-contained-img"
                           alt="41 Global 3"
-   data-caption="<b>Portrait illustration &#10;</b> illustration, charcoal"
+                          data-caption="<b>Portrait illustration &#10;</b> illustration, charcoal"
                         />
                       </div>
                     </div>
@@ -1556,15 +1647,28 @@ data-caption="<b>Portrait illustration - process &#10;</b> illustration, charcoa
                       >Commission: Kurt Cobain Portrait · 2017</span
                     >
                     <p class="stack-caption__text">
-Freelance work through my studio, GasmaskDesign, has spanned a wide range of industries, mediums, and project scales.
-This project began as a commission for a charcoal portrait of Kurt Cobain, based on a specific reference photograph. To my surprise, I learned the client intended to incorporate the portrait into a musician-inspired clothing line. <I>I have a strong feeling he was unsuccesful in that endeavor due to the comical amount of presumed copyright infringments</I>
+                      Freelance work through my studio, GasmaskDesign, has
+                      spanned a wide range of industries, mediums, and project
+                      scales. This project began as a commission for a charcoal
+                      portrait of Kurt Cobain, based on a specific reference
+                      photograph. To my surprise, I learned the client intended
+                      to incorporate the portrait into a musician-inspired
+                      clothing line.
+                      <i
+                        >I have a strong feeling he was unsuccesful in that
+                        endeavor due to the comical amount of presumed copyright
+                        infringments</i
+                      >
                     </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
                 <div class="grid-item illustration">
                   <!-- Helmet -->
-                  <div class="stack-container" data-logo="logos/web/commission_logo.webp">
+                  <div
+                    class="stack-container"
+                    data-logo="logos/web/commission_logo.webp"
+                  >
                     <div class="card">
                       <div class="stack-content">
                         <img
@@ -1575,11 +1679,11 @@ This project began as a commission for a charcoal portrait of Kurt Cobain, based
                           src="art/web/helmet_design-1.webp"
                           class="stack-contained-img"
                           alt="Helmet design"
-data-caption="<b>Helmet design - layout &#10;</b> illustration, digital design, acrylic"
+                          data-caption="<b>Helmet design - layout &#10;</b> illustration, digital design, acrylic"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <video
                           width="640"
@@ -1589,7 +1693,7 @@ data-caption="<b>Helmet design - layout &#10;</b> illustration, digital design, 
                           src="video/Helmet_Video.mp4"
                           class="stack-contained-img"
                           alt="Helmet video"
-data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
+                          data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                         ></video>
                       </div>
                     </div>
@@ -1617,7 +1721,7 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                           src="art/web/helmet_2.webp"
                           class="stack-contained-img"
                           alt="Helmet 2"
-              data-caption="<b>Helmet design - right &#10;</b> illustration, acrylic"
+                          data-caption="<b>Helmet design - right &#10;</b> illustration, acrylic"
                         />
                       </div>
                     </div>
@@ -1631,7 +1735,7 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                           src="art/web/helmet_3.webp"
                           class="stack-contained-img"
                           alt="Helmet 3"
-                   data-caption="<b>Helmet design - back &#10;</b> illustration, acrylic"
+                          data-caption="<b>Helmet design - back &#10;</b> illustration, acrylic"
                         />
                       </div>
                     </div>
@@ -1645,7 +1749,7 @@ data-caption="<b>Helmet design - video &#10;</b> illustration, acrylic"
                           src="art/web/helmet_4.webp"
                           class="stack-contained-img"
                           alt="Helmet 4"
-data-caption="<b>Helmet design - front &#10;</b> illustration, acrylic"
+                          data-caption="<b>Helmet design - front &#10;</b> illustration, acrylic"
                         />
                       </div>
                     </div>
@@ -1659,7 +1763,7 @@ data-caption="<b>Helmet design - front &#10;</b> illustration, acrylic"
                           src="art/web/helmet_5.webp"
                           class="stack-contained-img"
                           alt="Helmet 5"
-       data-caption="<b>Helmet design - above &#10;</b> illustration, acrylic"
+                          data-caption="<b>Helmet design - above &#10;</b> illustration, acrylic"
                         />
                       </div>
                     </div>
@@ -1675,13 +1779,16 @@ data-caption="<b>Helmet design - front &#10;</b> illustration, acrylic"
                     <span class="stack-caption__meta"
                       >Commission: Custom Painted Helmet · 2021</span
                     >
-                    <p class="stack-caption__text">
-                    </p>
-A custom motorcycle helmet commissioned by a client specifically drawn to my tattoo-inspired flash style work. Hand-painted in acrylic, this was a fun project to bring bold traditional tattoo imagery onto a unique three-dimensional canvas.
+                    <p class="stack-caption__text"></p>
+                    A custom motorcycle helmet commissioned by a client
+                    specifically drawn to my tattoo-inspired flash style work.
+                    Hand-painted in acrylic, this was a fun project to bring
+                    bold traditional tattoo imagery onto a unique
+                    three-dimensional canvas.
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
-                 <!-- Dowco 
+                <!-- Dowco 
 <div class="grid-item design">
                   <div
                     class="stack-container"
@@ -1744,7 +1851,10 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                 -->
                 <div class="grid-item illustration">
                   <!-- Flash -->
-                  <div class="stack-container" data-logo="logos/web/flash_logo.webp">
+                  <div
+                    class="stack-container"
+                    data-logo="logos/web/flash_logo.webp"
+                  >
                     <div class="card">
                       <div class="stack-content">
                         <img
@@ -1755,11 +1865,11 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/society-6-designs.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-1"
-      data-caption="<b>Flash - 'Hereditary' &#10;</b> illustration, digital design"
+                          data-caption="<b>Flash - 'Hereditary' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
-                      <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1773,7 +1883,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                         />
                       </div>
                     </div>
-                                                                                <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1783,11 +1893,11 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/society-6-designs-05.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-1"
-           data-caption="<b>Flash tattooed - 'Tom Nook' &#10;</b> illustration, digital design"
+                          data-caption="<b>Flash tattooed - 'Tom Nook' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1797,11 +1907,11 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/society-6-designs-03.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-1"
-          data-caption="<b>Flash - 'Honesty' &#10;</b> illustration, digital design"
+                          data-caption="<b>Flash - 'Honesty' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1811,7 +1921,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/society-6-designs-04.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-1"
-   data-caption="<b>Flash - 'Tomie' &#10;</b> illustration, digital design"
+                          data-caption="<b>Flash - 'Tomie' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1825,7 +1935,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/flashsheet-01.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-1"
-  data-caption="<b>Neo-American-Traditional Flash - 'Wolf' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Wolf' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1839,7 +1949,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/flashsheet-02.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-2"
-          data-caption="<b>Neo-American-Traditional Flash - 'Bison' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Bison' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1853,7 +1963,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/flashsheet-03.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-3"
-    data-caption="<b>Neo-American-Traditional Flash - 'Fox' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Fox' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1867,7 +1977,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/flashsheet-04.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-4"
-      data-caption="<b>Neo-American-Traditional Flash - 'Anchor' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Anchor' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1881,7 +1991,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/flashsheet-06.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-5"
-  data-caption="<b>Neo-American-Traditional Flash - 'Panther' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Panther' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1898,7 +2008,7 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1908,11 +2018,11 @@ A custom motorcycle helmet commissioned by a client specifically drawn to my tat
                           src="art/web/flashsheet-07.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-6"
-data-caption="<b>Neo-American-Traditional Flash - 'Raven' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Raven' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1922,11 +2032,11 @@ data-caption="<b>Neo-American-Traditional Flash - 'Raven' &#10;</b> illustration
                           src="art/web/flashsheet-08.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-7"
-data-caption="<b>Neo-American-Traditional Flash - 'Hellhound' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Hellhound' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1200"
@@ -1936,7 +2046,7 @@ data-caption="<b>Neo-American-Traditional Flash - 'Hellhound' &#10;</b> illustra
                           src="art/web/flashsheet-09.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-8"
-                  data-caption="<b>Neo-American-Traditional Flash - 'Full' &#10;</b> illustration, digital design"
+                          data-caption="<b>Neo-American-Traditional Flash - 'Full' &#10;</b> illustration, digital design"
                         />
                       </div>
                     </div>
@@ -1953,14 +2063,22 @@ data-caption="<b>Neo-American-Traditional Flash - 'Hellhound' &#10;</b> illustra
                       >Neo-American Traditional Tattoo Flash · 2022</span
                     >
                     <p class="stack-caption__text">
-A few excerpts from my flash designs, combing old school american-traditional tattoo styles with a modern twist. These illustrations explore my love for classic tattoo aesthetics while incorporating modern style, and a macabre, horror genre flair.</p>
+                      A few excerpts from my flash designs, combing old school
+                      american-traditional tattoo styles with a modern twist.
+                      These illustrations explore my love for classic tattoo
+                      aesthetics while incorporating modern style, and a
+                      macabre, horror genre flair.
+                    </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
                 <div class="grid-item illustration">
                   <!-- Print Shop -->
-                  <div class="stack-container" data-logo="logos/web/printshop_logo-2.webp">
-                      <div class="card">
+                  <div
+                    class="stack-container"
+                    data-logo="logos/web/printshop_logo-2.webp"
+                  >
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="640"
@@ -1983,7 +2101,7 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                           src="art/web/print-making_6.webp"
                           class="stack-contained-img"
                           alt="print-shop-2"
-  data-caption="<b>Printshop draft - 'Plague Doctor Skull' &#10;</b> illustration, intaglio, print"
+                          data-caption="<b>Printshop draft - 'Plague Doctor Skull' &#10;</b> illustration, intaglio, print"
                         />
                       </div>
                     </div>
@@ -1997,11 +2115,11 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                           src="art/web/print-making_2.webp"
                           class="stack-contained-img"
                           alt="print-shop-1"
-                            data-caption="<b>'Plague Doctor Skull' &#10;</b> illustration, intaglio, print"
+                          data-caption="<b>'Plague Doctor Skull' &#10;</b> illustration, intaglio, print"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="640"
@@ -2011,11 +2129,11 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                           src="art/web/print-making_3.webp"
                           class="stack-contained-img"
                           alt="print-shop-1"
-   data-caption="<b> Test prints - 'Faces' &#10;</b> illustration, intaglio, print"
+                          data-caption="<b> Test prints - 'Faces' &#10;</b> illustration, intaglio, print"
                         />
                       </div>
                     </div>
-                                        <div class="card">
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="1080"
@@ -2025,7 +2143,7 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                           src="art/web/print-making_4.webp"
                           class="stack-contained-img"
                           alt="print-shop-1"
-    data-caption="<b> Modern shop prints - 'mixed' &#10;</b> illustration, screen print, apparel, digital design, vinyl"
+                          data-caption="<b> Modern shop prints - 'mixed' &#10;</b> illustration, screen print, apparel, digital design, vinyl"
                         />
                       </div>
                     </div>
@@ -2039,7 +2157,8 @@ A few excerpts from my flash designs, combing old school american-traditional ta
                           src="art/web/print-making_5.webp"
                           class="stack-contained-img"
                           alt="print-shop-1"
-data-caption="<b> Modern shop prints - 'mixed' &#10;</b> illustration, screen print, apparel, digital design, vinyl"\
+                          data-caption="<b> Modern shop prints - 'mixed' &#10;</b> illustration, screen print, apparel, digital design, vinyl"
+                          \
                         />
                       </div>
                     </div>
@@ -2058,9 +2177,7 @@ data-caption="<b> Modern shop prints - 'mixed' &#10;</b> illustration, screen pr
                     </div>
                   </div>
                   <div class="item-meta">
-                    <span class="location"
-                      >Print Shop</span
-                    >
+                    <span class="location">Print Shop</span>
                     <span class="date">2015-2018</span>
                   </div>
 
@@ -2069,14 +2186,26 @@ data-caption="<b> Modern shop prints - 'mixed' &#10;</b> illustration, screen pr
                       >Print Shop · 2015-2018</span
                     >
                     <p class="stack-caption__text">
-These examples showcase my experience across both traditional and modern printmaking environments. While working in the University of Connecticut’s School of Fine Arts, I developed hands-on experience with a wide range of processes, including intaglio, relief printing, woodblock printing, letterpress, typesetting, and bookbinding. Beyond my own practice, I also had the opportunity to assist students in learning techniques, processes, and artistic approaches to the medium.</p>
+                      These examples showcase my experience across both
+                      traditional and modern printmaking environments. While
+                      working in the University of Connecticut’s School of Fine
+                      Arts, I developed hands-on experience with a wide range of
+                      processes, including intaglio, relief printing, woodblock
+                      printing, letterpress, typesetting, and bookbinding.
+                      Beyond my own practice, I also had the opportunity to
+                      assist students in learning techniques, processes, and
+                      artistic approaches to the medium.
+                    </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
                 <div class="grid-item illustration">
                   <!-- Watermedia -->
-                  <div class="stack-container" data-logo="logos/web/watermedia-logo.webp">
-                      <div class="card">
+                  <div
+                    class="stack-container"
+                    data-logo="logos/web/watermedia-logo.webp"
+                  >
+                    <div class="card">
                       <div class="stack-content">
                         <img
                           width="914"
@@ -2086,7 +2215,7 @@ These examples showcase my experience across both traditional and modern printma
                           src="art/web/muses.webp"
                           class="stack-contained-img"
                           alt="Flash sheet-1"
-                        data-caption=" <b>'Muses'&#10;</b> ink and watercolor"
+                          data-caption=" <b>'Muses'&#10;</b> ink and watercolor"
                         />
                       </div>
                     </div>
@@ -2106,9 +2235,7 @@ These examples showcase my experience across both traditional and modern printma
                     </div>
                   </div>
                   <div class="item-meta">
-                    <span class="location"
-                      >Watermedia</span
-                    >
+                    <span class="location">Watermedia</span>
                     <span class="date">2016-2018</span>
                   </div>
 
@@ -2117,7 +2244,14 @@ These examples showcase my experience across both traditional and modern printma
                       >Watermedia · 2016-2018</span
                     >
                     <p class="stack-caption__text">
-A collection of personal watermedia paintings exploring the themes and imagery that resonate with me most. Drawing inspiration from music and film, these pieces also delve into the complexities of self-doubt, self-destruction, and self-preservation. Each work serves as an opportunity to experiment with the medium while translating personal experiences and emotional narratives into visual form.</p>
+                      A collection of personal watermedia paintings exploring
+                      the themes and imagery that resonate with me most. Drawing
+                      inspiration from music and film, these pieces also delve
+                      into the complexities of self-doubt, self-destruction, and
+                      self-preservation. Each work serves as an opportunity to
+                      experiment with the medium while translating personal
+                      experiences and emotional narratives into visual form.
+                    </p>
                     <span class="stack-caption__link">Collapse project</span>
                   </div>
                 </div>
@@ -2135,26 +2269,84 @@ A collection of personal watermedia paintings exploring the themes and imagery t
                 <span id="about-work-title">About</span>
               </div>
               <div class="about-text">
-                <p>I’m a Portland, Oregon-based designer and illustrator with professional experience in creative fields dating back to 2016. My work spans graphic design, illustration, print production, packaging, digital media, and brand development, with a particular passion for print collateral and visual storytelling. I’ve collaborated with creative teams, led design projects, and worked across a range of industries, translating conceptual ideas into cohesive visual identities and engaging design assets.</p>
+                <p>
+                  I’m a Portland, Oregon-based designer and illustrator with
+                  professional experience in creative fields dating back to
+                  2016. My work spans graphic design, illustration, print
+                  production, packaging, digital media, and brand development,
+                  with a particular passion for print collateral and visual
+                  storytelling. I’ve collaborated with creative teams, led
+                  design projects, and worked across a range of industries,
+                  translating conceptual ideas into cohesive visual identities
+                  and engaging design assets.
+                </p>
                 <div class="about-more" id="about-more">
-                  <p>As a hands-on, collaborative designer, I bring a balance of creative exploration and practical production knowledge to every project. From illustration and image editing to prepress and packaging, I enjoy finding thoughtful, effective ways to bring ideas to life across both print and digital platforms.</p>
-                  <p>Outside of design, my work and creative perspective are heavily influenced by the creative culture around me, punk and hardcore music, horror films, tattoo culture, as well as a broader interest in activism, social and political injustice, and environmental consciousness. These influences continually shape how I approach visual storytelling, encouraging me to create work that feels expressive, intentional, and connected to the world around me.</p>
+                  <p>
+                    As a hands-on, collaborative designer, I bring a balance of
+                    creative exploration and practical production knowledge to
+                    every project. From illustration and image editing to
+                    prepress and packaging, I enjoy finding thoughtful,
+                    effective ways to bring ideas to life across both print and
+                    digital platforms.
+                  </p>
+                  <p>
+                    Outside of design, my work and creative perspective are
+                    heavily influenced by the creative culture around me, punk
+                    and hardcore music, horror films, tattoo culture, as well as
+                    a broader interest in activism, social and political
+                    injustice, and environmental consciousness. These influences
+                    continually shape how I approach visual storytelling,
+                    encouraging me to create work that feels expressive,
+                    intentional, and connected to the world around me.
+                  </p>
                 </div>
-                <button class="about-toggle" type="button" aria-expanded="false" aria-controls="about-more">Read more</button>
+                <button
+                  class="about-toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="about-more"
+                >
+                  Read more
+                </button>
               </div>
             </section>
 
             <footer class="footer__wrapper" id="contact">
-                <a class="footer__logo" href="#top" aria-label="Back to top" title="Back to top">
-                  <img src="assets/gasmaskcoin.gif" alt="gasmask coin" width="60" height="60" />
-                </a>
-                <nav class="footer__links" aria-label="Social links">
-                  <a href="https://instagram.com/gasmask.pdx" target="_blank" rel="noopener noreferrer">Instagram</a>
-                  <a href="https://linkedin.com/in/iantbrady" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  <a href="https://www.behance.net/Iantbrady" target="_blank" rel="noopener noreferrer">Bēhance</a>
-                </nav>
-                <div class="footer__copy">© Ian Brady / Gasmask</div>
-              </footer>
+              <a
+                class="footer__logo"
+                href="#top"
+                aria-label="Back to top"
+                title="Back to top"
+              >
+                <img
+                  src="assets/gasmaskcoin.gif"
+                  alt="gasmask coin"
+                  width="60"
+                  height="60"
+                />
+              </a>
+              <nav class="footer__links" aria-label="Social links">
+                <a
+                  href="https://instagram.com/gasmask.pdx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+                <a
+                  href="https://linkedin.com/in/iantbrady"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://www.behance.net/Iantbrady"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bēhance</a
+                >
+              </nav>
+              <div class="footer__copy">© Ian Brady / Gasmask</div>
+            </footer>
           </div>
         </div>
       </div>
